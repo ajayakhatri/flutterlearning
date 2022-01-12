@@ -7,9 +7,9 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Catelog App")),
+        title: Text("Catalog App"),
       ),
-      body: Center(child: Text("Hello World !!")),
+      body: Center(child: Container(child: Text("HelloWorld !!"))),
       drawer: Drawer(),
     );
   }
