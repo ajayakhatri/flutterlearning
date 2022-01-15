@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project/pages/home_page.dart';
 import 'package:project/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project/utilities/routes.dart';
 void main() {
   runApp(MyApp());
 }
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch:Colors.grey,
@@ -25,8 +27,8 @@ class MyApp extends StatelessWidget {
       // initialRoute: "/home",
       routes: {
         "/":(context)=> LoginPage(),
-        "/home":(context)=> HomePage(),
-        "/login": (context)=> LoginPage(),
+        MyRoutes.homeroute:(context)=> HomePage(),
+        MyRoutes.loginroute : (context)=> LoginPage(),
       },
     );
   }
